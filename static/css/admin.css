@@ -1,0 +1,121 @@
+/* 🌍 GLOBAL */
+body {
+    background: #f4f4f6;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* 🔥 HEADER */
+#header {
+    background: #111;
+    color: #fff;
+    border-bottom: 2px solid #d4af37; /* doré */
+}
+
+/* LOGO / TITRE */
+#site-name {
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* 🧊 CARDS */
+.module {
+    background: white;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.module:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+/* 📦 TABLE */
+#changelist table {
+    border-radius: 12px;
+    overflow: hidden;
+    background: white;
+}
+
+/* 🎯 HOVER TABLE */
+#changelist tbody tr {
+    transition: 0.2s;
+}
+
+#changelist tbody tr:hover {
+    background: #fafafa;
+    transform: scale(1.01);
+}
+
+/* 🏷️ BADGES */
+.badge {
+    padding: 6px 12px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.badge-success {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.badge-danger {
+    background: #fdecea;
+    color: #c62828;
+}
+
+/* 🧼 INPUTS */
+input, textarea, select {
+    border-radius: 10px !important;
+    padding: 10px;
+    border: 1px solid #ddd;
+    transition: 0.2s;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #d4af37;
+    box-shadow: 0 0 0 2px rgba(212,175,55,0.2);
+}
+
+/* 🚀 BUTTONS */
+.button, input[type=submit] {
+    background: #111;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 15px;
+    border: none;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #d4af37;
+    color: black;
+}
+
+/* ✨ ACTIONS */
+.object-tools a {
+    border-radius: 8px;
+    background: #111;
+    color: white !important;
+    padding: 6px 12px;
+}
+
+.object-tools a:hover {
+    background: #d4af37;
+    color: black !important;
+}
+
+/* 🖼️ FILIGRANE DISCRET (propre) */
+body::after {
+    content: "MAISON FAKI";
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    font-size: 80px;
+    font-weight: 800;
+    color: rgba(0,0,0,0.03);
+    pointer-events: none;
+}

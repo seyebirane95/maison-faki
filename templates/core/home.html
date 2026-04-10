@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block content %}
+
+<!-- INTRO -->
+<div class="text-center mb-5">
+  <h2 class="fw-bold" style="color:#5a3e2b;">Notre Collection</h2>
+  <p class="text-muted">
+    Entre tradition africaine et élégance contemporaine
+  </p>
+</div>
+
+<!-- PRODUITS -->
+<div class="row g-4">
+
+  {% for p in products %}
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+    <div class="card product-card border-0">
+
+      <div class="img-container">
+        <img src="{% if p.image %}{{ p.image.url }}{% elif p.image_url %}{{ p.image_url }}{% else %}{% static 'img/placeholder.png' %}{% endif %}">
+      </div>
+
+      <div class="card-body text-center">
+        <h6 class="fw-bold">{{ p.name }}</h6>
+        <p class="price">{{ p.price }} € </p>
+
+        <a href="{% url 'product_detail' p.slug %}" class="btn btn-outline-dark w-100 mb-2">
+          Voir
+        </a>
+
+        <form action="{% url 'add_to_cart' p.id %}" method="post">
+          {% csrf_token %}
+          <button class="btn btn-main w-100">
+            Ajouter
+          </button>
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+  {% empty %}
+  <p class="text-center">Aucun produit disponible</p>
+  {% endfor %}
+
+</div>
+
+<!-- STYLE -->
+<style>
+
+.product-card {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+}
+
+.img-container {
+  height: 250px;
+  overflow: hidden;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.img-container img:hover {
+  transform: scale(1.1);
+}
+
+.price {
+  color: #5a3e2b;
+  font-weight: bold;
+}
+
+</style>
+
+{% endblock %}
