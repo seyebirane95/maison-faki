@@ -12,7 +12,7 @@ environ.Env.read_env(BASE_DIR / '.env')  # charge le .env
 
 DEBUG = env.bool('DEBUG', default=True)
 SECRET_KEY = env('SECRET_KEY', default='changeme')
-ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['localhost', '127.0.0.1', 'maison-faki.onrender.com'], )
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "").split(",")
 
 # ------------------------------
 # ADMIN
