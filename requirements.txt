@@ -9,3 +9,4 @@ Django-environ==0.10.0
 dj-database-url==1.2.0
 psycopg2-binary==2.9.9
 pymysql
+Pillow
