@@ -6,13 +6,13 @@ from products.models import Product  # <-- à adapter selon où se trouve ton mo
 
 class Order(models.Model):
     PAYMENT_STATUS_CHOICES = [
-        ("pending", "En attente"),
-        ("paid", "Payé"),
+        ("pending", "Payer"),
+        ("paid", "EN attend"),
         ("failed", "Échoué"),
     ]
 
     PAYMENT_METHOD_CHOICES = [
-        ("qr_code", "QR Code"),
+        
         ("cash", "Paiement à la livraison"),
         ("default", "Par défaut"),
     ]

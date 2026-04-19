@@ -13,10 +13,12 @@ class ProductAdmin(admin.ModelAdmin):
     list_filter = ('category', 'is_active')
     search_fields = ('name', 'description')
     prepopulated_fields = {'slug': ('name',)}
+    def stock_status(self, obj):
+        if obj.stock > 10:
+            return format_html('<span class="badge badge-success">En stock</span>')
+        elif obj.stock > 0:
+            return format_html('<span class="badge" style="background:#fff3cd;color:#856404;">Faible</span>')
+        else:
+            return format_html('<span class="badge badge-danger">Rupture</span>')
 
-    def status_badge(self, obj):
-        if obj.is_active:
-            return format_html('<span class="badge badge-success">Actif</span>')
-        return format_html('<span class="badge badge-danger">Inactif</span>')
-
-    status_badge.short_description = "Statut"
+    stock_status.short_description = "Stock"

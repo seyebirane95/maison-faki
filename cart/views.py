@@ -1,6 +1,9 @@
 from django.shortcuts import redirect, render, get_object_or_404
 from django.contrib import messages
 from products.models import Product
+import stripe
+from django.conf import settings
+from django.shortcuts import redirect
 
 def _get_cart(session):
     return session.setdefault('cart', {})
@@ -55,4 +58,38 @@ def pay_on_delivery(request):
     request.session.modified = True
 
     # Rediriger vers la page de succès
-    return redirect('success')  # '/orders/success/'
+    return redirect('/orders/success/')  # '/orders/success/'
+
+
+stripe.api_key = settings.STRIPE_SECRET_KEY
+
+def payement_par_cartBancaire(request):
+    cart = request.session.get('cart', {})
+
+    if not cart:
+        messages.warning(request, "Votre panier est vide.")
+        return redirect('view_cart')
+
+    line_items = []
+
+    for item in cart.values():
+        line_items.append({
+            'price_data': {
+                'currency': 'eur',
+                'product_data': {
+                    'name': item['name'],
+                },
+                'unit_amount': int(float(item['price']) * 100),  # en centimes
+            },
+            'quantity': item['qty'],
+        })
+
+    session = stripe.checkout.Session.create(
+        payment_method_types=['card'],
+        line_items=line_items,
+        mode='payment',
+        success_url='http://localhost:8000/orders/success/',
+        cancel_url='http://localhost:8000/view-cart',
+    )
+
+    return redirect(session.url)

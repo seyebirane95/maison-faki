@@ -1,12 +1,25 @@
 {% extends "admin/base_site.html" %}
 {% load static %}
 
+{% block title %}Maison Faki Admin{% endblock %}
+
 {% block branding %}
-<h1 id="site-name">
-    🛍️ Maison Faki Admin
-</h1>
+<div style="display:flex; align-items:center; gap:15px;">
+    
+    <img src="{% static 'img/logo.jpg' %}" 
+         style="height:55px; width:55px; object-fit:cover; border-radius:50%; box-shadow:0 4px 10px rgba(0,0,0,0.2);">
+
+    <div>
+        <h1 id="site-name" style="margin:0; font-weight:600; color:white;">
+            Maison Faki
+        </h1>
+        <small style="color:#c8a27a;">Admin Dashboard</small>
+    </div>
+
+</div>
 {% endblock %}
 
 {% block extrastyle %}
 <link rel="stylesheet" href="{% static 'css/admin.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:300;400;600&display=swap" rel="stylesheet">
 {% endblock %}
