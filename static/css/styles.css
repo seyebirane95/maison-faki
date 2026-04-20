@@ -2,3 +2,13 @@
 .grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(220px,1fr)); gap: var(--spacing); }
 img { border-radius: 12px; }
 nav ul { align-items: center; }
+
+.social-link:hover {
+  color: #c9c4b8 !important;
+  opacity: 0.85;
+}
+
+.footer-col ul li a:hover {
+  color: #c9c4b8 !important;
+  transform: translateX(3px);
+}
