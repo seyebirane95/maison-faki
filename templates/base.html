@@ -1,4 +1,5 @@
 {% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -158,25 +159,124 @@
 </main>
 
 <!-- FOOTER -->
-<footer class="text-light pt-5 pb-3">
-  <div class="container text-center">
+<footer style="background: #1a1a18; color: #c9c4b8; font-family: 'Jost', sans-serif; font-weight: 300;">
 
-    <h5 class="fw-bold">Maison Faki</h5>
-    <p class="small">Élégance africaine moderne</p>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 
-    <div class="d-flex justify-content-center gap-3 fs-5 mb-3">
-      <i class="fab fa-facebook"></i>
-      <i class="fab fa-instagram"></i>
-      <i class="fab fa-x-twitter"></i>
+  <style>
+    .footer-inner { max-width: 960px; margin: 0 auto; padding: 0 2rem; }
+    .footer-services { display: grid; grid-template-columns: repeat(4, 1fr); padding: 2.5rem 0; border-bottom: 0.5px solid #3a3a35; }
+    .service-item { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 1rem; border-right: 0.5px solid #3a3a35; }
+    .service-item:last-child { border-right: none; }
+    .service-icon { width: 28px; height: 28px; margin-bottom: 10px; opacity: 0.7; }
+    .service-label { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #8a8578; line-height: 1.6; }
+    .service-label strong { display: block; color: #d6d0c4; font-weight: 500; font-size: 12px; letter-spacing: 0.04em; text-transform: none; margin-top: 2px; }
+    .footer-links { display: grid; grid-template-columns: repeat(4, 1fr); padding: 2.5rem 0; border-bottom: 0.5px solid #3a3a35; }
+    .footer-col { padding: 0 1rem; border-right: 0.5px solid #3a3a35; }
+    .footer-col:last-child { border-right: none; }
+    .footer-col-title { font-family: 'Cormorant Garamond', serif; font-size: 13px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: #e8e2d8; margin: 0 0 1rem 0; }
+    .footer-col ul { list-style: none; margin: 0; padding: 0; }
+    .footer-col ul li { margin-bottom: 8px; }
+    .footer-col ul li a { color: #8a8578; font-size: 12px; letter-spacing: 0.06em; text-decoration: none; transition: color 0.2s; }
+    .footer-col ul li a:hover { color: #c9c4b8; }
+    .social-links { display: flex; flex-direction: column; gap: 8px; }
+    .social-link { display: flex; align-items: center; gap: 8px; color: #8a8578; font-size: 12px; letter-spacing: 0.06em; text-decoration: none; }
+    .social-link:hover { color: #c9c4b8; }
+    .social-icon { width: 14px; height: 14px; flex-shrink: 0; }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 0; }
+    .footer-brand { font-family: 'Cormorant Garamond', serif; font-size: 15px; letter-spacing: 0.14em; color: #e8e2d8; }
+    .footer-copy { font-size: 10px; letter-spacing: 0.1em; color: #5a5750; text-transform: uppercase; }
+  </style>
+
+  <div class="footer-inner">
+
+    <!-- SERVICES -->
+    <div class="footer-services">
+      <div class="service-item">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="#c9c4b8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 6.18a2 2 0 011.98-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.91 11.09a16 16 0 006 6l.41-.41a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+        </svg>
+        <span class="service-label">Conseil & vente<strong>+33 769 73 07 98</strong></span>
+      </div>
+      <div class="service-item">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="#c9c4b8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/>
+        </svg>
+        <span class="service-label">Paiement sécurisé<strong>Carte bancaire</strong></span>
+      </div>
+      <div class="service-item">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="#c9c4b8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/>
+          <path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/>
+        </svg>
+        <span class="service-label">Retours gratuits<strong>Sous 30 jours</strong></span>
+      </div>
+      <div class="service-item">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="#c9c4b8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="1" y="3" width="15" height="13" rx="1"/>
+          <path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+        </svg>
+        <span class="service-label">Livraison offerte<strong>Dès 80 €</strong></span>
+      </div>
     </div>
 
-    <hr>
+    <!-- LIENS -->
+    <div class="footer-links">
+      <div class="footer-col">
+        <p class="footer-col-title">Découvrir</p>
+        <ul>
+          <li><a href="https://www.instagram.com/fakihouse/">À propos</a></li>
+          <li><a href="{% url 'product_list' %}">Collection</a></li>
+          <li><a href="https://www.instagram.com/explore/tags/worldwideshipping%E2%9C%88%EF%B8%8F/">#worldwideshipping✈️</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Aide</p>
+        <ul>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Livraison</a></li>
+          <li><a href="#">Retours</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Informations</p>
+        <ul>
+          <li><a href="#">CGV</a></li>
+          <li><a href="#">Confidentialité</a></li>
+          <li><a href="#">Mentions légales</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Suivez-nous</p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/fakihouse/" target="_blank" class="social-link">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            Instagram
+          </a>
+          <a href="#" target="_blank" class="social-link">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            Facebook
+          </a>
+          <a href="#" target="_blank" class="social-link">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            X / Twitter
+          </a>
+          <a href="https://l.instagram.com/?u=http%3A%2F%2Fwww.tiktok.com%2F%40fakivesture%3Ffbclid%3DPAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnPgASUU07BTzHX_Gnw7FgmrZha2b6VplkTy6L_fFZbxbjhy14yuH3uVKSTeQ_aem_eipPhnkbq21tGZpVyKRSxA&e=AT5aip8rg5Q-YNFr1hgUHd0uJYu6pIw-5mTSGnvxbxL3AeRnlSFKz6jQYqJjJGNs4IaAL3ESU26Bc-54e9WcI-hF8wZu-KpvalvSoHMnrLEqO2xYWA_9j3qkBw" target="_blank" class="social-link">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg>
+            TikTok
+          </a>
+        </div>
+      </div>
+    </div>
 
-    <p class="small">© 2026 Maison Faki — Birane SEYE</p>
+    <!-- BAS DE PAGE -->
+    <div class="footer-bottom">
+      <span class="footer-brand">Maison Faki</span>
+      <span class="footer-copy">© 2026 — Birane Seye</span>
+    </div>
 
   </div>
 </footer>
-
 <!-- JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
