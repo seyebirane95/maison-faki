@@ -101,22 +101,26 @@
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-transparent px-4">
 
-  <a class="navbar-brand fw-bold text-white" href="/">
-    Maison Faki
-  </a>
+  <a class="navbar-brand fw-bold text-white" href="/">Maison Faki</a>
 
-  <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+  <div class="d-flex align-items-center gap-2 ms-auto d-lg-none">
+    <a class="btn btn-main position-relative" href="{% url 'view_cart' %}">
+      🛒
+      <span class="position-absolute top-0 start-100 translate-middle badge bg-dark">
+        {{ cart_total_qty }}
+      </span>
+    </a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
 
   <div class="collapse navbar-collapse" id="nav">
-    <ul class="navbar-nav ms-auto">
+    <ul class="navbar-nav ms-auto align-items-lg-center">
 
       {% for c in nav_categories %}
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'category_list' c.slug %}">
-          {{ c.name }}
-        </a>
+        <a class="nav-link" href="{% url 'category_list' c.slug %}">{{ c.name }}</a>
       </li>
       {% endfor %}
 
@@ -124,7 +128,7 @@
         <a class="nav-link" href="{% url 'product_list' %}">Produits</a>
       </li>
 
-      <li class="nav-item ms-3">
+      <li class="nav-item ms-lg-3 d-none d-lg-block">
         <a class="btn btn-main position-relative" href="{% url 'view_cart' %}">
           🛒
           <span class="position-absolute top-0 start-100 translate-middle badge bg-dark">
@@ -196,7 +200,7 @@
         <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="#c9c4b8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 6.18a2 2 0 011.98-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.91 11.09a16 16 0 006 6l.41-.41a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
         </svg>
-        <span class="service-label">Conseil & vente<strong>+33 769 73 07 98</strong></span>
+        <span class="service-label">Conseil & vente<strong>09 70 01 89 89</strong></span>
       </div>
       <div class="service-item">
         <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="#c9c4b8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
@@ -227,7 +231,7 @@
         <ul>
           <li><a href="https://www.instagram.com/fakihouse/">À propos</a></li>
           <li><a href="{% url 'product_list' %}">Collection</a></li>
-          <li><a href="https://www.instagram.com/explore/tags/worldwideshipping%E2%9C%88%EF%B8%8F/">#worldwideshipping✈️</a></li>
+          <li><a href="#">Engagements</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -261,10 +265,10 @@
             <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             X / Twitter
           </a>
-          <a href="https://l.instagram.com/?u=http%3A%2F%2Fwww.tiktok.com%2F%40fakivesture%3Ffbclid%3DPAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnPgASUU07BTzHX_Gnw7FgmrZha2b6VplkTy6L_fFZbxbjhy14yuH3uVKSTeQ_aem_eipPhnkbq21tGZpVyKRSxA&e=AT5aip8rg5Q-YNFr1hgUHd0uJYu6pIw-5mTSGnvxbxL3AeRnlSFKz6jQYqJjJGNs4IaAL3ESU26Bc-54e9WcI-hF8wZu-KpvalvSoHMnrLEqO2xYWA_9j3qkBw" target="_blank" class="social-link">
+          <a href="#" target="_blank" class="social-link">
             <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg>
             TikTok
-          </a>
+</a>
         </div>
       </div>
     </div>
