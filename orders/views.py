@@ -371,3 +371,8 @@ def success(request):
         return render(request, 'orders/success.html', {
             "error": str(e)
         })
+
+from django.http import HttpResponse
+
+def health(request):
+    return HttpResponse("ok")
