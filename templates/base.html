@@ -1,5 +1,5 @@
 {% load static %}
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="fr">
 <head>
   <meta charset="utf-8">
@@ -132,7 +132,7 @@
   <div class="collapse navbar-collapse" id="nav">
     <ul class="navbar-nav ms-auto align-items-lg-center">
 
-      {% for c in nav_categories %}
+      {% for c in nav_categories %} 
       <li class="nav-item">
         <a class="nav-link" href="{% url 'category_list' c.slug %}">{{ c.name }}</a>
       </li>
@@ -173,31 +173,31 @@
 </main>
 
 <!-- FOOTER -->
-<footer style="background: #1a1a18; color: #c9c4b8; font-family: 'Jost', sans-serif; font-weight: 300;">
+<footer style="background: #f5f1e8; color: #4a4540; font-family: 'Jost', sans-serif; font-weight: 300;">
   <div class="footer-inner">
 
     <div class="footer-services">
       <div class="service-item">
-        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="#c9c4b8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="#4a4540" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 6.18a2 2 0 011.98-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.91 11.09a16 16 0 006 6l.41-.41a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
         </svg>
         <span class="service-label">Conseil & vente<strong>+33 769 73 07 98</strong></span>
       </div>
       <div class="service-item">
-        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="#c9c4b8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="#4a4540" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
           <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/>
         </svg>
         <span class="service-label">Paiement sécurisé<strong>Carte bancaire</strong></span>
       </div>
       <div class="service-item">
-        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="#c9c4b8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="#4a4540" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
           <polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/>
           <path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/>
         </svg>
         <span class="service-label">Retours gratuits<strong>Sous 30 jours</strong></span>
       </div>
       <div class="service-item">
-        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="#c9c4b8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="#4a4540" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
           <rect x="1" y="3" width="15" height="13" rx="1"/>
           <path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
         </svg>
