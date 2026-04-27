@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maison Faki — Chargement</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #1a1a18;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: 'Georgia', serif;
+    }
+
+    .loader-wrap { text-align: center; }
+
+    .brand {
+      font-size: 10px;
+      letter-spacing: 0.35em;
+      color: #5a5750;
+      text-transform: uppercase;
+      margin-bottom: 2.5rem;
+    }
+
+    .spinner {
+      width: 52px;
+      height: 52px;
+      margin: 0 auto 2rem;
+    }
+
+    .msg {
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      color: #8a8578;
+      text-transform: uppercase;
+      min-height: 20px;
+      transition: opacity 0.5s;
+    }
+
+    .bar {
+      width: 100px;
+      height: 0.5px;
+      background: #3a3a35;
+      margin: 1.5rem auto 0;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .bar::after {
+      content: '';
+      position: absolute;
+      top: 0; left: -60%;
+      width: 60%;
+      height: 100%;
+      background: #c8a27a;
+      animation: slide 1.8s ease-in-out infinite;
+    }
+
+    @keyframes slide {
+      0%   { left: -60%; }
+      100% { left: 160%; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="loader-wrap">
+    <p class="brand">Maison Faki</p>
+
+    <svg class="spinner" viewBox="0 0 52 52">
+      <circle cx="26" cy="26" r="22" fill="none" stroke="#3a3a35" stroke-width="1"/>
+      <circle cx="26" cy="26" r="22" fill="none" stroke="#c8a27a" stroke-width="1"
+              stroke-dasharray="32 106" stroke-linecap="round">
+        <animateTransform attributeName="transform" type="rotate"
+                          from="0 26 26" to="360 26 26"
+                          dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="26" cy="4" r="2.5" fill="#c8a27a">
+        <animateTransform attributeName="transform" type="rotate"
+                          from="0 26 26" to="360 26 26"
+                          dur="2s" repeatCount="indefinite"/>
+      </circle>
+    </svg>
+
+    <p class="msg" id="msg">Préparation de votre expérience</p>
+    <div class="bar"></div>
+  </div>
+
+  <script>
+    const msgs = [
+      "Préparation de votre expérience",
+      "Chargement de la collection",
+      "Un instant s'il vous plaît",
+      "Bienvenue chez Maison Faki"
+    ];
+    let i = 0;
+    const el = document.getElementById('msg');
+
+    setInterval(() => {
+      el.style.opacity = 0;
+      setTimeout(() => {
+        i = (i + 1) % msgs.length;
+        el.textContent = msgs[i];
+        el.style.opacity = 1;
+      }, 500);
+    }, 2500);
+
+    // Ping le serveur toutes les 3s jusqu'au réveil puis redirige
+    async function checkReady() {
+      try {
+        const res = await fetch('/health/', { cache: 'no-store' });
+        if (res.ok) {
+          window.location.href = '/';
+        } else {
+          setTimeout(checkReady, 3000);
+        }
+      } catch {
+        setTimeout(checkReady, 3000);
+      }
+    }
+    setTimeout(checkReady, 3000);
+  </script>
+
+</body>
+</html>
