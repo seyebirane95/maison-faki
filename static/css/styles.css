@@ -3,15 +3,15 @@
 img { border-radius: 12px; }
 nav ul { align-items: center; }
 
-.service-label { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #4a4540; line-height: 1.6; }
-.service-label strong { display: block; color: #1a1510; font-weight: 500; font-size: 12px; letter-spacing: 0.04em; text-transform: none; margin-top: 2px; }
-.footer-col-title { font-family: 'Cormorant Garamond', serif; font-size: 13px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: #1a1510; margin: 0 0 1rem 0; }
-.footer-col ul li a { color: #4a4540; font-size: 12px; letter-spacing: 0.06em; text-decoration: none; transition: color 0.2s; }
-.footer-col ul li a:hover { color: #1a1510 !important; transform: translateX(3px); }
-.social-link { color: #4a4540; }
-.social-link:hover { color: #1a1510 !important; }
-.footer-brand { font-family: 'Cormorant Garamond', serif; font-size: 15px; letter-spacing: 0.14em; color: #1a1510; }
-.footer-copy { font-size: 10px; letter-spacing: 0.1em; color: #4a4540; text-transform: uppercase; }
+.service-label { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #333; line-height: 1.6; }
+.service-label strong { display: block; color: #000; font-weight: 600; font-size: 12px; letter-spacing: 0.04em; text-transform: none; margin-top: 2px; }
+.footer-col-title { font-family: 'Cormorant Garamond', serif; font-size: 13px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #000; margin: 0 0 1rem 0; }
+.footer-col ul li a { color: #333; font-size: 12px; letter-spacing: 0.06em; text-decoration: none; transition: color 0.2s; }
+.footer-col ul li a:hover { color: #000 !important; transform: translateX(3px); }
+.social-link { color: #333; }
+.social-link:hover { color: #000 !important; }
+.footer-brand { font-family: 'Cormorant Garamond', serif; font-size: 15px; letter-spacing: 0.14em; color: #000; }
+.footer-copy { font-size: 10px; letter-spacing: 0.1em; color: #333; text-transform: uppercase; }
 .service-item { border-right: 0.5px solid #d8d2c8; }
 .footer-services { border-bottom: 0.5px solid #d8d2c8; }
 .footer-links { border-bottom: 0.5px solid #d8d2c8; }
