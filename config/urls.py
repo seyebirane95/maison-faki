@@ -17,6 +17,7 @@ urlpatterns = [
     path('orders/', include('orders.urls')),
     path('cart/pay-on-delivery/', pay_on_delivery, name='pay_on_delivery'),
     path('cart/pay-on-livraison/', pay_on_livraison, name='pay_on_livraison'),
+    path('health/', views.health, name='health'),
     
 ]
 
