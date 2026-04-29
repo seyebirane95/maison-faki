@@ -7,7 +7,7 @@
   <title>{% block title %}Maison Faki{% endblock %}</title>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600&family=Cormorant+Garamond:wght@300;400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
@@ -50,10 +50,7 @@
       text-align: center;
       color: white;
     }
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: bold;
-    }
+    .hero h1 { font-size: 3rem; font-weight: bold; }
     #changing-text {
       font-size: 1.2rem;
       margin-top: 15px;
@@ -75,37 +72,37 @@
 
     /* FOOTER */
     .footer-inner { max-width: 960px; margin: 0 auto; padding: 0 2rem; }
-    .footer-services { display: grid; grid-template-columns: repeat(4, 1fr); padding: 2.5rem 0; border-bottom: 0.5px solid #3a3a35; }
-    .service-item { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 1rem; border-right: 0.5px solid #3a3a35; }
+    .footer-services { display: grid; grid-template-columns: repeat(4, 1fr); padding: 2.5rem 0; border-bottom: 0.5px solid #d8d2c8; }
+    .service-item { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 1rem; border-right: 0.5px solid #d8d2c8; }
     .service-item:last-child { border-right: none; }
-    .service-icon { width: 28px; height: 28px; margin-bottom: 10px; opacity: 0.7; }
-    .service-label { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #8a8578; line-height: 1.6; }
-    .service-label strong { display: block; color: #d6d0c4; font-weight: 500; font-size: 12px; letter-spacing: 0.04em; text-transform: none; margin-top: 2px; }
-    .footer-links { display: grid; grid-template-columns: repeat(4, 1fr); padding: 2.5rem 0; border-bottom: 0.5px solid #3a3a35; }
-    .footer-col { padding: 0 1rem; border-right: 0.5px solid #3a3a35; }
+    .service-icon { width: 28px; height: 28px; margin-bottom: 10px; opacity: 0.8; }
+    .service-label { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #333; line-height: 1.6; }
+    .service-label strong { display: block; color: #000; font-weight: 700; font-size: 12px; letter-spacing: 0.04em; text-transform: none; margin-top: 2px; }
+    .footer-links { display: grid; grid-template-columns: repeat(4, 1fr); padding: 2.5rem 0; border-bottom: 0.5px solid #d8d2c8; }
+    .footer-col { padding: 0 1rem; border-right: 0.5px solid #d8d2c8; }
     .footer-col:last-child { border-right: none; }
-    .footer-col-title { font-family: 'Cormorant Garamond', serif; font-size: 13px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: #e8e2d8; margin: 0 0 1rem 0; }
+    .footer-col-title { font-family: 'Cormorant Garamond', serif; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #000; margin: 0 0 1rem 0; }
     .footer-col ul { list-style: none; margin: 0; padding: 0; }
     .footer-col ul li { margin-bottom: 8px; }
-    .footer-col ul li a { color: #8a8578; font-size: 12px; letter-spacing: 0.06em; text-decoration: none; transition: color 0.2s; }
-    .footer-col ul li a:hover { color: #c9c4b8 !important; transform: translateX(3px); }
+    .footer-col ul li a { color: #333; font-size: 12px; letter-spacing: 0.06em; text-decoration: none; transition: color 0.2s; }
+    .footer-col ul li a:hover { color: #000 !important; transform: translateX(3px); }
     .social-links { display: flex; flex-direction: column; gap: 8px; }
-    .social-link { display: flex; align-items: center; gap: 8px; color: #8a8578; font-size: 12px; letter-spacing: 0.06em; text-decoration: none; transition: color 0.2s; }
-    .social-link:hover { color: #c9c4b8 !important; }
+    .social-link { display: flex; align-items: center; gap: 8px; color: #333; font-size: 12px; letter-spacing: 0.06em; text-decoration: none; transition: color 0.2s; }
+    .social-link:hover { color: #000 !important; }
     .social-icon { width: 14px; height: 14px; flex-shrink: 0; }
     .footer-bottom { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 0; }
-    .footer-brand { font-family: 'Cormorant Garamond', serif; font-size: 15px; letter-spacing: 0.14em; color: #e8e2d8; }
-    .footer-copy { font-size: 10px; letter-spacing: 0.1em; color: #5a5750; text-transform: uppercase; }
+    .footer-brand { font-family: 'Cormorant Garamond', serif; font-size: 15px; letter-spacing: 0.14em; color: #000; }
+    .footer-copy { font-size: 10px; letter-spacing: 0.1em; color: #333; text-transform: uppercase; }
 
     @media (max-width: 768px) {
       .footer-services { grid-template-columns: repeat(2, 1fr); }
       .footer-services .service-item:nth-child(2) { border-right: none; }
       .footer-services .service-item:nth-child(3),
-      .footer-services .service-item:nth-child(4) { border-top: 0.5px solid #3a3a35; }
+      .footer-services .service-item:nth-child(4) { border-top: 0.5px solid #d8d2c8; }
       .footer-links { grid-template-columns: repeat(2, 1fr); }
       .footer-col:nth-child(2) { border-right: none; }
       .footer-col:nth-child(3),
-      .footer-col:nth-child(4) { border-top: 0.5px solid #3a3a35; padding-top: 1.5rem; }
+      .footer-col:nth-child(4) { border-top: 0.5px solid #d8d2c8; padding-top: 1.5rem; }
     }
   </style>
 </head>
@@ -116,7 +113,6 @@
 
   <a class="navbar-brand fw-bold text-white" href="/">Maison Faki</a>
 
-  <!-- Panier + burger visibles direct sur mobile -->
   <div class="d-flex align-items-center gap-2 ms-auto d-lg-none">
     <a class="btn btn-main position-relative" href="{% url 'view_cart' %}">
       🛒
@@ -132,7 +128,7 @@
   <div class="collapse navbar-collapse" id="nav">
     <ul class="navbar-nav ms-auto align-items-lg-center">
 
-      {% for c in nav_categories %} 
+      {% for c in nav_categories %}
       <li class="nav-item">
         <a class="nav-link" href="{% url 'category_list' c.slug %}">{{ c.name }}</a>
       </li>
@@ -142,7 +138,6 @@
         <a class="nav-link" href="{% url 'product_list' %}">Produits</a>
       </li>
 
-      <!-- Panier desktop uniquement -->
       <li class="nav-item ms-3 d-none d-lg-block">
         <a class="btn btn-main position-relative" href="{% url 'view_cart' %}">
           🛒
@@ -178,26 +173,26 @@
 
     <div class="footer-services">
       <div class="service-item">
-        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="#4a4540" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 6.18a2 2 0 011.98-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.91 11.09a16 16 0 006 6l.41-.41a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
         </svg>
         <span class="service-label">Conseil & vente<strong>+33 769 73 07 98</strong></span>
       </div>
       <div class="service-item">
-        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="#4a4540" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
           <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/>
         </svg>
         <span class="service-label">Paiement sécurisé<strong>Carte bancaire</strong></span>
       </div>
       <div class="service-item">
-        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="#4a4540" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
           <polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/>
           <path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/>
         </svg>
         <span class="service-label">Retours gratuits<strong>Sous 30 jours</strong></span>
       </div>
       <div class="service-item">
-        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="#4a4540" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
           <rect x="1" y="3" width="15" height="13" rx="1"/>
           <path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
         </svg>
