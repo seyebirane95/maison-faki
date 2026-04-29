@@ -1,5 +1,3 @@
-Voici une version **pro, propre et orientée production** de ton README — adaptée à ton projet **Maison Faki** et valorisante pour un recruteur 👇
-
 ---
 
 # 🚀 Maison Faki – Plateforme E-commerce Django
@@ -174,3 +172,7 @@ Data Engineer | Consultant BI
 ## ⭐ Conclusion
 
 Ce projet démontre la capacité à concevoir une application complète, de la logique métier jusqu’au déploiement cloud, avec une attention particulière portée à la **qualité, la scalabilité et l’expérience utilisateur**.
+
+
+👉 A Visité le site:
+[https://www.maisonfaki.com/](https://www.maisonfaki.com/)
