@@ -1,4 +1,3 @@
----
 
 # 🚀 Maison Faki – Plateforme E-commerce Django
 
