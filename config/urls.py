@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from orders.views import pay_on_delivery, pay_on_livraison, success,health,robots_txt
+from orders.views import pay_on_delivery, pay_on_livraison, success,health
 
 # Personnalisation dynamique de l'admin
 admin.site.site_header = getattr(settings, "ADMIN_SITE_HEADER", "Django Administration")
